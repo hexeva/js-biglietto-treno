@@ -41,28 +41,37 @@ console.log(overageTicket);
 
 // variabile messaggio 
 
-let customerMessage = "L'importo dovuto ammonta a €:"
+let customerMessage;
 
 
 // variabili di età e messaggio all'utente
 
 
 if ( ageRequest < 18 ) {
+    customerMessage = 'Il suo prezzo scontato ammonta a €:' + underageDiscount.toFixed(2);
 
-    alert( customerMessage + underageTicket.toFixed(2) );
     
 
 } else if  ( ageRequest >= 65 ){
-    alert( customerMessage + overageTicket.toFixed(2) );
+    customerMessage = 'Il suo prezzo scontato ammonta a €:' + overageDiscount.toFixed(2);
     
    
 
 
 } else {
-    alert( customerMessage + ticketPrice.toFixed(2) );
+    customerMessage = 'Il suo prezzo ammonta a €:' + ticketPrice.toFixed(2);
+    
     
 }
+
+// OUTPUT
+
+alert(customerMessage);
+
+
+
     
+
 
 
 
