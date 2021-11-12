@@ -32,6 +32,7 @@ let underageDiscount = (ticketPrice * 20) / 100;
 let overageTicket = ticketPrice - ( (ticketPrice * 40) / 100 );
 
 
+
 // variabile messaggio 
 
 let customerMessage;
