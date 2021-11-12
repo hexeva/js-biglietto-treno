@@ -22,30 +22,41 @@ let ageRequest = parseInt( prompt ('Quanti anni ha?') );
 
 
 // costo biglietto base e biglietti scontati
-
 let ticketPrice = kilometersRequest * 0.21;
 console.log(ticketPrice);
 
 // sconto applicato per minorenni 
-
 let underageDiscount = (ticketPrice * 20) / 100;
 
-// quindi
+// quindi il biglietto scontato per minorenni sarà
  let underageTicket = ticketPrice - underageDiscount;
  console.log(underageTicket);
 
 // sconto applicato per over 65
-
 let overageDiscount = (ticketPrice * 40) / 100;
 
-// quindi
-
+// quindi il biglietto scontato per over 65 sarà:
 let overageTicket = ticketPrice - overageDiscount;
 console.log(overageTicket);
+
+// variabile messaggio 
+
+let customerMessage = "L'importo dovuto ammonta a €:"
 
 
 // variabili di età
 
-if (ageRequest < 18) {
+if ( ageRequest < 18 ) {
+    customerMessage + underageTicket;
+    
 
+} else if  ( ageRequest >= 65 ){
+   customerMessage + overageTicket;
+
+
+} else {
+    customerMessage + ticketPrice;
 }
+
+// OUTPUT
+
