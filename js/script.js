@@ -7,14 +7,8 @@
 
 
 
-// DIchiarazioni
-
-
-
-
 // CHIEDO AL'UTENTE IL NUMERO DI CHILOMETRI CHE VUOLE PERCORRERE
 let kilometersRequest = parseInt( prompt ('Quanti chilometri intende percorrere?') );
-
 
 
 // CHIEDO ALL'UTENTE L'ETA'
@@ -23,21 +17,20 @@ let ageRequest = parseInt( prompt ('Quanti anni ha?') );
 
 // costo biglietto base e biglietti scontati
 let ticketPrice = kilometersRequest * 0.21;
-console.log(ticketPrice);
+
 
 // sconto applicato per minorenni 
 let underageDiscount = (ticketPrice * 20) / 100;
 
 // quindi il biglietto scontato per minorenni sarà
  let underageTicket = ticketPrice - underageDiscount;
- console.log(underageTicket);
+ 
 
-// sconto applicato per over 65
-let overageDiscount = (ticketPrice * 40) / 100;
+//  LA VARIABILE PER OVER 65 LA CREO SENZA GENERARE LA VARIABILE DISCOUNT
 
 // quindi il biglietto scontato per over 65 sarà:
-let overageTicket = ticketPrice - overageDiscount;
-console.log(overageTicket);
+let overageTicket = ticketPrice - ( (ticketPrice * 40) / 100 );
+
 
 // variabile messaggio 
 
@@ -48,12 +41,12 @@ let customerMessage;
 
 
 if ( ageRequest < 18 ) {
-    customerMessage = 'Il suo prezzo scontato ammonta a €:' + underageDiscount.toFixed(2);
+    customerMessage = 'Il suo prezzo scontato ammonta a €:' + underageTicket.toFixed(2);
 
     
 
 } else if  ( ageRequest >= 65 ){
-    customerMessage = 'Il suo prezzo scontato ammonta a €:' + overageDiscount.toFixed(2);
+    customerMessage = 'Il suo prezzo scontato ammonta a €:' + overageTicket.toFixed(2);
     
    
 
